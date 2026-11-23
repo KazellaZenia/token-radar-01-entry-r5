@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Beacon Radar — the token launch radar</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<header class="hero">
+  <div class="hero-top">
+    <div>
+      <h1>BEACON RADAR</h1>
+      <p class="tagline">Which pre-token protocol is worth farming next — and what it would be worth if it issued one.</p>
+    </div>
+    <div class="hero-badge">178 protocols · 40 watchlist · snapshot 2026-11-14</div>
+  </div>
+  <section class="model-strip" id="model-strip"></section>
+  <section class="tiles" id="tiles"></section>
+</header>
+<main>
+  <section class="controls">
+    <input id="q" type="search" placeholder="Search a protocol…" aria-label="Search">
+    <select id="cat" aria-label="Category"><option value="">All categories</option></select>
+    <select id="sort" aria-label="Sort">
+      <option value="implied">Sort: implied value</option>
+      <option value="tvl">Sort: TVL</option>
+      <option value="odds">Sort: token odds</option>
+      <option value="hourly">Sort: $/hour</option>
+    </select>
+    <span class="count" id="count"></span>
+  </section>
+  <section id="detail" class="detail" hidden></section>
+  <table class="board" id="board">
+    <thead>
+      <tr><th>#</th><th>Protocol</th><th>TVL</th><th>7d</th><th>Implied value</th><th>Token odds</th><th>$/hour</th></tr>
+    </thead>
+    <tbody id="rows"></tbody>
+  </table>
+  <p class="foot" id="foot"></p>
+</main>
+<script src="../data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
